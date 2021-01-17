@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="jsTest.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="jsTest.css">
+    <title>JS Test</title>
+</head>
+<body>
+    <header>         
+        <h1 class="container-fluid">JS Test</h1>
+        <nav class="navbar navbar-expand-sm justify-content-center navbar-light">
+            <ul class="menu navbar-nav">
+                <li id="lesson" class="nav-item"><a class="nav-link">Lessons</a></li>
+                <li id="drill" class="nav-item"><a class="nav-link">Drills</a></li>
+                <li id="test" class="nav-item"><a class="nav-link">Test</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="lessons-page">
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h3 data-id="pre-introduction" id="main" class="lesson-button">Lessons</h3>
+                            <ul class="menu list-group">
+                                <li data-id="introduction" class="lesson-button list-group-item-action list-group-item-primary ">Introduction</li>
+                                <li data-id="set-up" class="lesson-button list-group-item-action list-group-item-primary">Set up</li>
+                                <li data-id="data-types" class="lesson-button list-group-item-action list-group-item-primary">Data Types</li>
+                                <li data-id="variables" class="lesson-button list-group-item-action list-group-item-primary">Variables</li>        
+                                <li data-id="comments" class="lesson-button list-group-item-action list-group-item-primary">Comments</li>
+                                <li data-id="arithmetic-operators" class="lesson-button list-group-item-action list-group-item-primary"> Arithmetic Operators</li>
+                            </ul>
+                        </div>
+
+                    <div data-id="pre-introduction" class="page col-sm-10">
+                        <p>Welcome, this is a website for learning the fundamentals of vanilla JS, here you'll find lessons where you can learn, drills where you can practice with repetition, and tests which is where you can find out how much you know about JS!</p>
+
+                        <p>It's recommend for you to go through the lessons from top to bottom, unless you are looking for a particular lesson such for reference about a certain subject.</p>
+                    </div>
+                    
+                    <!--introduction-->
+                    <div data-id="introduction" class="page col-sm-10">
+                        <h2>JS Explanation</h2>
+                        <p>JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.</p>
+
+                        <!-- Button to Open the Modal -->
+                        <button type="button" class="btn btn-primary open-question-modal" data-toggle="modal" data-target="#myModal" data-id="question-introduction-lesson" data-answer="answer-introduction-lesson">
+                            Quiz
+                        </button>
+                    </div> 
+
+                    <!--Set up-->
+                    <div data-id="set-up" class="page col-sm-10">
+                        <h2>Setup Page</h2>
+                            <p>	
+                                In order to use JS, it needs to be implented to the HTML page, there are 3 ways to do it. One is inline way which when you directly type in to the HTML element like this <pre>&lt;p&gt;onclick="alert('The paragraph has been clicked')"&lt;/p&gt;</pre>  
+                            </p>
+
+                            <p>Another way is to do it internally, which is putting the script tags inside the HTML.</p>
+
+                            <p>The final way is the most reccommend way, and that is externally which is linking the JS file to the HTML one.</p>
+
+                            <button type="button" class="btn btn-primary open-question-modal" data-toggle="modal" data-target="#myModal" data-id="question-setUp-lesson" data-answer="answer-setUp-lesson">
+                                Quiz
+                            </button>
+                    </div>
+
+                    <!--data types-->
+                    <div data-id="data-types" class="page lessons-page col-sm-10">
+                        <h2>Data Types</h2>
+                        <p>JS has different data types, data types are different types of code, that are used for ceratian things</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div id="string" class="col-sm-3 p-2">
+                                    <h4>Strings</h4>
+                                    <p>Strings are things such as text, they are enclosed in single or double quotes, if other data types are enclosed in single or double quotes they become strings as well.</p>
+                                </div>
+                                <div id="number" class="col-sm-3 p-2">
+                                    <h4>Numbers</h4>
+                                    <p>Numbers, are well numbers, regardless if they are decimals or integers. They don't have any quotation marks, they are just written by themselves.</p>
+                                </div>
+                                <div id="boolean" class="col-sm-3 p-2">
+                                    <h4>Booleans</h4>
+                                    <p>Boolean has two values. Either true or false.</p>
+                                </div>
+                                <div id="null_undefined" class="col-sm-3 p-2">
+                                    <h4>Null/Undefined</h4>
+                                    <p>Null and undefined, mean it doesn't exist, undefined is typcially given by default if there isn't a value. Null is put by purpouse so something a variable would be empty</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary open-question-modal" data-toggle="modal" data-target="#myModal" data-id="question-data-types-lesson" data-answer="answer-data-types-lesson">
+                            Quiz
+                        </button>
+                    </div>
+                    
+                    <!--variables-->
+                    <div data-id="variables" class="page col-sm-10">
+                        <h2>Variables</h2>
+
+                        <p>Variables are a way to store data for later use. To use variables there are 3 keywords</p>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <p>var</p>
+                                    <p>The var keyword is a way to create a variable, it has a global scope which means that anywhere in the code it can be called.</p>
+                                    <pre>var aString = "Hello world";</pre>
+                                    <pre>const aNull = null;</pre>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>let</p>
+                                    <p>let is another keyword to use a variable, but it has a limited scope, so it wouldn't interfer or work from any place in the code</p>
+                                    <pre>let aNumber = 10;</pre>
+                                    <pre>const aNull;</pre>
+                                    <p>It could also be equal to undefined</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>const</p>
+                                    <p>const stands for constant it's a the last variable, and it can only be called once, which means that its value can't be changed later in the code, unlike the other variables, it could help by running into less bugs.</p>
+                                    <pre>const aBoolean = true;</pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary open-question-modal" data-toggle="modal" data-target="#myModal" data-id="question-variables-lesson" data-answer="answer-variables-lesson">
+                            Quiz
+                        </button>
+                    </div>
+                    <!--comments-->
+                    <div data-id="comments" class="page col-sm-10">
+                        <h2>Comments</h2>
+                        <p>Comments are way to write in the code without it interfing with the output. It's useful for explaining the code and for testing purposes as it can comment out codes.</p>
+
+                        <p>There are two types of comments. One of them is called inline comment which only effects one line, and the other one is muliti line comment which can effect mulitple lines</p>
+
+                        <pre>//inline comment</pre>
+                        <pre>/*Multi <br> line <br> comment*/</pre>
+
+                        <button type="button" class="btn btn-primary open-question-modal" data-toggle="modal" data-target="#myModal" data-id="question-comments-lesson" data-answer="answer-comments-lesson">
+                            Quiz
+                        </button>
+                    </div>
+                    <!--operators-->
+                    <div data-id="arithmetic-operators" class="page col-sm-10">
+                        <h2>Arithmetic Operators</h2>
+                        <p>Arithmetic Operators are things such as addition, subtraction, division, mulitplication, and things such as this.</p>
+                        <p>They can be used to do math.</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h4>Addition</h4>
+                                    <pre>let sum = 5 + 8;</pre>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h4>Subtraction</h4>
+                                    <pre>let sum = 5 - 8;</pre>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h4>Division</h4>
+                                    <pre>let sum = 10 / 1;</pre>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h4>Multiplication</h4>
+                                    <pre>let sum = 25 * 8;</pre>
+                                </div>
+                            </div>
+                            <p class="p-3 mb-2 bg-primary text-white">The semi-colon is a recommend practice to end statements in JS</p>
+                        </div>
+                        <button type="button" class="btn btn-primary open-question-modal" data-toggle="modal" data-target="#myModal" data-id="question-arithmetic-operators-lesson" data-answer="answer-arithmetic-operators-lesson">
+                            Quiz
+                        </button>
+                    </div> 
+                </div>
+        </section>
+        <section id="drills-page">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <h3 id="drill-part">Drills</h3>
+                        <ul class="menu list-group">
+                            <li id="introduction-drills" class="list-group-item-action list-group-item-primary">Introduction</li>
+                            <li id="setUp-drills" class="list-group-item-action list-group-item-primary">setUp</li>
+                            <li id="dataTypes-drills" class="list-group-item-action list-group-item-primary">Data Types</li>
+                            <li id="variables-drills" class="list-group-item-action list-group-item-primary">Variables</li>
+                            <li id="comments-drills" class="list-group-item-action list-group-item-primary">Comments</li>
+                            <li id="arithmetic-operators-drills" class="list-group-item-action list-group-item-primary">Arithmetic Operators</li>
+                        </ul> 
+                    </div>
+
+                    <div id="pre-introduction-drills" class="col-sm-10">
+                        <p>In this page you can practice about the different subjects, by repetition.</p>
+                    </div>
+
+                    <div id="introduction-drills-page" class="col-sm-10">
+                        <h2>Introduction Drills</h2>
+                        <div id="introduction-first">
+                            <h3>What is JS?</h3>
+                            <ul>
+                                <li>(a) JS is a front-end programming language used in making websites dynamic.</li>
+                                <li>(b) JS is a back-end language used for servers.</li>
+                                <li>(c) JS is used mainly to design websites.</li>
+                            </ul>
+                            <div id="input"></a>
+                                <input id="introduction-insert">
+                                <button class="btn btn-primary">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div  id="setUp-drills-page" class="col-sm-10">
+                        <h2>setUp Drills</h2>
+                    </div>
+                    <div id="data-types-drills-page" class="col-sm-10">
+                        <h2>Data Type Drills</h2>
+                    </div>
+                    <div id="variable-drills-page" class="col-sm-10">
+                        <h2>Variable Drills</h2>
+                    </div>
+                    <div id="comment-drills-page" class="col-sm-10">
+                        <h2>Comment Drills</h2>
+                    </div>
+                    <div id="arithmetic-operator-drills-page" class="col-sm-10">
+                        <h2>Arithmetic Operator Drills</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tests-page">
+            <h3>Tests</h3>
+        </section>
+    </main>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal" data-question="">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+                
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                
+            </div>
+            <div class="container-fluid">
+                <input type="text" id="answer" class="container-fluid">
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                <button type="button" id="check" class="btn btn-primary">Check</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</html>

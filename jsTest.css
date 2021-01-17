@@ -1,0 +1,63 @@
+:root {
+    --primery-color: rgb(0, 106, 141);
+}
+
+header {
+    background-color: var(--primery-color);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    cursor:pointer;
+}
+
+#main {
+    cursor:pointer;
+}
+
+#main:hover {
+    color:rgb(0, 106, 141);
+}
+
+#drills-page {
+    display:none;
+}
+
+#tests-page {
+    display:none;
+}
+
+#next-intro-page {
+    display: none;
+}
+
+#string {
+    background-color:rgb(0, 110, 255);
+}
+
+#number {
+    background-color: yellow;
+}
+
+#boolean {
+    background-color:rgb(39, 90, 255);
+}
+
+#null_undefined {
+    background-color:rgb(202, 202, 202);
+}
+
+#introduction-drills-page, #setUp-drills-page {
+    display: none;
+}
+
+#drill-part {
+    cursor:pointer;
+}
+
+.page {
+    display:none;
+}
