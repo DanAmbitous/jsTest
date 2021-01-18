@@ -150,7 +150,7 @@ $("#introduction-drills-page, #setUp-drills-page, #data-types-drills-page, #vari
 $(".menu > li").mouseover(function() { //li elements hover effects
     $(this).css("font-weight", "900")
 })
-
+ 
 $(".menu > li").mouseout(function() {
     $(this).css("font-weight", "400")
 }) //li elements hover effects end
@@ -160,7 +160,7 @@ $(".lesson-button").click(function() {
    // $(".page").hide();
 
 //body
-//    $(".page-drills").hide();
+//    $(".page-drills").hide(); 
  //   $(".page-test").hide();
     $(".page").each(function() {
         if($(this).data("id") === pageId) {
