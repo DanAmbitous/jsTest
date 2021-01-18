@@ -116,7 +116,7 @@ $("#check").click(function() {
         alert("Incorrect");
     } 
 
-    $("#myModal .close-btn").click()
+    $("#myModal .close-btn").click();
 
 
 
