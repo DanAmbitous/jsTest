@@ -75,6 +75,14 @@ var questionSet = [
     }, 
 ]
 
+var drillSet = [
+    {
+        id: ""
+    }
+]
+
+$("#introduction-lessons").show(); //To show the pre introduction page by default
+
 $(".open-question-modal").click(function() {//quiz box
     let questionId = $(this).data("id");
 
@@ -85,8 +93,6 @@ $(".open-question-modal").click(function() {//quiz box
     $(".modal-body").html(question.options.join("<br>"));
 })//quiz box end
 
-
-
 $("#check").click(function() {
     let questionId = $("#myModal").data("question");
     
@@ -94,58 +100,18 @@ $("#check").click(function() {
 
     let question = questionSet.find(object => object.id === questionId);
 
-    /*{
-        id: "question-arithmetic-operators-lesson",
-        question: "What are arithmetic operators?",
-        options:[
-            "(a) Arithmetic operators are symbols for only working with strings",
-            "(b) Arithmetic operators are code to use for package management",
-            "(c) Arithmetic operators are for version control only",
-            "(d) Arithmetic operators are for using math in code such as by working with numbers, or concatenating strings"
-        ],
-        answers: [
-            "d",
-        ]
-    }*/
-
-
     if (question.answers.includes(answerInput)) {
-        alert("Correct")
-        $("#myModal").css("background-color", "lime");
+        alert("Correct");
     } else {
         alert("Incorrect");
     } 
 
-    $("#myModal .close-btn").click();
-
-
-
-    /*let objectAnswer = $(".open-question-modal").data("answer");
-
-    let answer = questionSet.find(object => object.answers === objectAnswer); The problem is here, answer is undefined
-
-    answer = "a"; hard code*/
-
-    /*for (let index = 0; index < questionSet.length; index++) {
-        let answer = questionSet[index].answers;
-
-        let input = $("#answer").val();
-
-        if (input == answer) {
-        alert("correct");
-        } else {
-        alert("incorrect");
-        }
-    }*/
+    $(".close-btn").click();
 })
  
 $('#exampleModal').on('shown.bs.modal', function () { //alert Box
     $('#myInput').trigger('focus')
-}) 
-
-$("#introduction-page, #setUp-page, #data-types-page, #variables-page, #comments-page, #arithmetic-operators-page").hide(); //hide lessons' pages
-
-$("#introduction-drills-page, #setUp-drills-page, #data-types-drills-page, #variable-drills-page, #comment-drills-page, #arithmetic-operator-drills-page").hide(); //hide drills' pages
+}) //alert Box
 
 $(".menu > li").mouseover(function() { //li elements hover effects
     $(this).css("font-weight", "900")
@@ -157,13 +123,40 @@ $(".menu > li").mouseout(function() {
 
 $(".lesson-button").click(function() {
     let pageId = $(this).data("id");
-   // $(".page").hide();
-
-//body
-//    $(".page-drills").hide(); 
- //   $(".page-test").hide();
+ 
     $(".page").each(function() {
         if($(this).data("id") === pageId) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    })
+}) 
+
+//Nav bar
+/*$("#lesson").click(function() {
+    $("#lessons-page").show();
+    $("#drills-page").hide();
+    $("#tests-page").hide();
+})
+
+$("#drill").click(function() {
+    $("#lessons-page").hide();
+    $("#drills-page").show();
+    $("#tests-page").hide();
+})
+
+$("#test").click(function() {
+    $("#lessons-page").hide();
+    $("#drills-page").hide();
+    $("#tests-page").show();
+})*/
+
+$(".button-nav").click(function() {
+    let wholePageId = $(this).data("id");
+ 
+    $(".whole-page").each(function() {
+        if($(this).data("id") === wholePageId) {
             $(this).show();
         } else {
             $(this).hide();
@@ -206,9 +199,9 @@ console.log(phoneFinder.phone);
 } 
 
 console.log(functionName(7))
-console.log(functionName(6))
+console.log(functionName(6))*/
 
-function function_name(Parameter) {
+/*function function_name(Parameter) {
 
 }
 
@@ -224,15 +217,14 @@ const function_name = (name = "Dan") => {
     return output;
 } 
 
-Parameter is variable defined in function declaration. Argument is the actual value of this variable that get passed to the function
+Parameter is variable defined in function declaration. Argument is the actual value of this variable that get passed to the function*/
 
-ES6 function syntax NOTE
+/*ES6 function syntax NOTE
 const functionName = (parameter) => returnValue
 
-const function_name = (name = "Dan") => "a" + name
+const function_name = (name = "Dan") => "a" + name*/
 
-
-let myArray = [
+/*let myArray = [
     {
         phone: "12",
         name: "dan",
@@ -247,13 +239,18 @@ let myArray = [1, 2]
 let myArray = ["dan", "mahdi"]
 
 find ===> if not found ==> undefined 
-find ===> if found ==> item in array 
+find ===> if found ==> item in array
 
 
 const myVar = myArray.find((item) => item.name == "mahdi")
 
+>>>{
+        phone: "14",
+        name: "mahdi",
+    }
 
-myVar ==> {
+    myVar ==> { 
     phone: "14",
     name: "mahdi",
-}*/
+}
+*/

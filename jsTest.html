@@ -19,18 +19,18 @@
         <h1 class="container-fluid">JS Test</h1>
         <nav class="navbar navbar-expand-sm justify-content-center navbar-light">
             <ul class="menu navbar-nav">
-                <li id="lesson" class="nav-item"><a class="nav-link">Lessons</a></li>
-                <li id="drill" class="nav-item"><a class="nav-link">Drills</a></li>
-                <li id="test" class="nav-item"><a class="nav-link">Test</a></li>
+                <li id="lesson" class="button-nav nav-item"><a class="nav-link">Lessons</a></li>
+                <li id="drill" class="button-nav nav-item"><a class="nav-link">Drills</a></li>
+                <li id="test" class="button-nav nav-item"><a class="nav-link">Test</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="lessons-page">
+        <section id="lessons-page" class="whole-page" data-id="lesson-whole-page">
             <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-2">
-                            <h3 data-id="pre-introduction" id="main" class="lesson-button">Lessons</h3>
+                            <h3 data-id="pre-introduction" id="main" class="lesson-button">Lessons</h3> 
                             <ul class="menu list-group">
                                 <li data-id="introduction" class="lesson-button list-group-item-action list-group-item-primary ">Introduction</li>
                                 <li data-id="set-up" class="lesson-button list-group-item-action list-group-item-primary">Set up</li>
@@ -41,7 +41,7 @@
                             </ul>
                         </div>
 
-                    <div data-id="pre-introduction" class="page col-sm-10">
+                    <div id="introduction-lessons" class="page col-sm-10" data-id="pre-introduction">
                         <p>Welcome, this is a website for learning the fundamentals of vanilla JS, here you'll find lessons where you can learn, drills where you can practice with repetition, and tests which is where you can find out how much you know about JS!</p>
 
                         <p>It's recommend for you to go through the lessons from top to bottom, unless you are looking for a particular lesson such for reference about a certain subject.</p>
@@ -182,7 +182,7 @@
                     </div> 
                 </div>
         </section>
-        <section id="drills-page">
+        <section id="drills-page" class="whole-page" data-id="drill-whole-page">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-2">
@@ -234,7 +234,7 @@
                 </div>
             </div>
         </section>
-        <section id="tests-page">
+        <section id="tests-page" class="whole-page" data-id="test-whole-page">
             <h3>Tests</h3>
         </section>
     </main>
