@@ -159,7 +159,7 @@ $(".button-nav").click(function() {
         if($(this).data("id") === wholePageId) {
             $(this).show();
         } else {
-            $(this).hide();
+            $(this).hide(); 
         }
     })
 }) 
