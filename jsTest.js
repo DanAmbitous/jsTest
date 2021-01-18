@@ -176,6 +176,8 @@ $(".lesson-button").click(function() {
    // $(".page").hide();
 
 //body
+//    $(".page-drills").hide();
+ //   $(".page-test").hide();
     $(".page").each(function() {
         if($(this).data("id") === pageId) {
             $(this).show();
@@ -185,185 +187,15 @@ $(".lesson-button").click(function() {
     })
 }) 
 
-/*
-$("#lesson").click(function() { //nav bar
-    $("#lessons-page").show("fast");
-    $("#drills-page").hide("fast");
-    $("#tests-page").hide("fast");
-})
-
-$("#drill").click(function() {
-    $("#lessons-page").hide("fast");
-    $("#drills-page").show("fast");
-    $("#tests-page").hide("fast");
-})
-
-$("#test").click(function() {
-    $("#lessons-page").hide("fast");
-    $("#drills-page").hide("fast");
-    $("#tests-page").show("fast");
-}) //nav bar end
-
-$("#main").click(function() { //lesson pages
-    $("#pre-introduction").show("fast");
-    $("#introduction-page").hide("fast");
-    $("#setUp-page").hide();
-    $("#data-types-page").hide("fast");
-    $("#variables-page").hide("fast");
-    $("#comments-page").hide("fast");
-    $("#arithmetic-operators-page").hide("fast");
-    $(".next-page").hide("fast");
-})
-
-$("#introduction").click(function() {
-    $("#pre-introduction").hide("fast");
-    $("#introduction-page").show("fast");
-    $("#setUp-page").hide();
-    $("#data-types-page").hide("fast");
-    $("#variables-page").hide("fast");
-    $("#comments-page").hide("fast");
-    $("#arithmetic-operators-page").hide("fast");
-    $(".next-page").hide("fast");
-})
-
-$("#set-up").click(function() {
-    $("#pre-introduction").hide("fast");
-    $("#introduction-page").hide("fast");
-    $("#setUp-page").show();
-    $("#data-types-page").hide("fast");
-    $("#variables-page").hide("fast");
-    $("#comments-page").hide("fast");
-    $("#arithmetic-operators-page").hide("fast");
-    $(".next-page").hide("fast");
-})
-
-$("#data-types").click(function() {
-    $("#pre-introduction").hide("fast");
-    $("#introduction-page").hide("fast");
-    $("#setUp-page").hide();
-    $("#data-types-page").show("fast");
-    $("#variables-page").hide("fast");
-    $("#comments-page").hide("fast");
-    $("#arithmetic-operators-page").hide("fast");
-    $(".next-page").hide("fast");
-})
-
-$("#variables").click(function() {
-    $("#pre-introduction").hide("fast");
-    $("#introduction-page").hide("fast");
-    $("#setUp-page").hide();
-    $("#data-types-page").hide("fast");
-    $("#variables-page").show("fast");
-    $("#comments-page").hide("fast");
-    $("#arithmetic-operators-page").hide("fast");
-    $(".next-page").hide("fast");
-})
-
-$("#comments").click(function() {
-    $("#pre-introduction").hide("fast");
-    $("#introduction-page").hide("fast");
-    $("#setUp-page").hide();
-    $("#data-types-page").hide("fast");
-    $("#variables-page").hide("fast");
-    $("#comments-page").show("fast");
-    $("#arithmetic-operators-page").hide("fast");
-    $(".next-page").hide("fast");
-})
-
-$("#arithmetic-operators").click(function() {
-    $("#pre-introduction").hide("fast");
-    $("#introduction-page").hide("fast");
-    $("#setUp-page").hide();
-    $("#data-types-page").hide("fast");
-    $("#variables-page").hide("fast");
-    $("#comments-page").hide("fast");
-    $("#arithmetic-operators-page").show("fast");
-    $(".next-page").hide("fast");
-})
-//lesson pages enda
-
-$("#drill-part").click(function() { //drills pages
-    $("#pre-introduction-drills").show("fast");
-    $("#introduction-drills-page").hide("fast");
-    $("#setUp-drills-page").hide("fast");
-    $("#data-types-drills-page").hide("fast");
-    $("#variable-drills-page").hide("fast");
-    $("#comment-drills-page").hide("fast");
-    $("#arithmetic-operator-drills-page").hide("fast");
-})
-
-$("#introduction-drills").click(function() {
-    $("#pre-introduction-drills").hide("fast");
-    $("#introduction-drills-page").show("fast");
-    $("#setUp-drills-page").hide("fast");
-    $("#data-types-drills-page").hide("fast");
-    $("#variable-drills-page").hide("fast");
-    $("#comment-drills-page").hide("fast");
-    $("#arithmetic-operator-drills-page").hide("fast");
-})
-
-$("#setUp-drills").click(function() {
-    $("#pre-introduction-drills").hide("fast");
-    $("#introduction-drills-page").hide("fast");
-    $("#setUp-drills-page").show("fast");
-    $("#data-types-drills-page").hide("fast");
-    $("#variable-drills-page").hide("fast");
-    $("#comment-drills-page").hide("fast");
-    $("#arithmetic-operator-drills-page").hide("fast");
-}) 
-
-$("#dataTypes-drills").click(function() {
-    $("#pre-introduction-drills").hide("fast");
-    $("#introduction-drills-page").hide("fast");
-    $("#setUp-drills-page").hide("fast");
-    $("#data-types-drills-page").show("fast");
-    $("#variable-drills-page").hide("fast");
-    $("#comment-drills-page").hide("fast");
-    $("#arithmetic-operator-drills-page").hide("fast");
-}) 
-
-$("#variables-drills").click(function() {
-    $("#pre-introduction-drills").hide("fast");
-    $("#introduction-drills-page").hide("fast");
-    $("#setUp-drills-page").hide("fast");
-    $("#data-types-drills-page").hide("fast");
-    $("#variable-drills-page").show("fast");
-    $("#comment-drills-page").hide("fast");
-    $("#arithmetic-operator-drills-page").hide("fast");
-})
- 
-$("#comments-drills").click(function() {
-    $("#pre-introduction-drills").hide("fast");
-    $("#introduction-drills-page").hide("fast");
-    $("#setUp-drills-page").hide("fast");
-    $("#data-types-drills-page").hide("fast");
-    $("#variable-drills-page").hide("fast");
-    $("#comment-drills-page").show("fast");
-    $("#arithmetic-operator-drills-page").hide("fast");
-}) 
-
-$("#arithmetic-operators-drills").click(function() {
-    $("#pre-introduction-drills").hide("fast");
-    $("#introduction-drills-page").hide("fast");
-    $("#setUp-drills-page").hide("fast");
-    $("#data-types-drills-page").hide("fast");
-    $("#variable-drills-page").hide("fast");
-    $("#comment-drills-page").hide("fast");
-    $("#arithmetic-operator-drills-page").show("fast");
-}) //drills pages
-*/
-
-
-
-
-/*
-//let myArray = [2, 5, 6, 7, 1]
+/*How to use find() method
+let myArray = [2, 5, 6, 7, 1]
 
 const sixExists = myArray.find((number) => number === 6)
-//{name:"apple", price: 5},
 
+>>> true
+*/
 
-let myArray = [
+/*let myArray = [ How to use find method in an object
     {
         phone: "12",
         name: "dan",
@@ -378,10 +210,11 @@ const phoneFinder = myArray.find((object) => object.name == "mahdi")
 
 console.log(phoneFinder.phone);
 
+>>> 14
+*/
 
 
-
-function functionName(number) {
+/*function functionName(number) {
     if(number === 6) {
         return true;
     } 
@@ -396,10 +229,6 @@ function function_name(Parameter) {
 }
 
 const function_name = (name = "Dan") => {
-    
-    //body
-
-
     return myvalue;
 }
 
@@ -411,9 +240,9 @@ const function_name = (name = "Dan") => {
     return output;
 } 
 
-/*Parameter is variable defined in function declaration. Argument is the actual value of this variable that get passed to the function*/
+Parameter is variable defined in function declaration. Argument is the actual value of this variable that get passed to the function
 
-/*ES6 function syntax NOTE
+ES6 function syntax NOTE
 const functionName = (parameter) => returnValue
 
 const function_name = (name = "Dan") => "a" + name
