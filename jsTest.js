@@ -116,7 +116,7 @@ $("#check").click(function() {
         alert("Incorrect");
     } 
 
-    $("#myModal .close-btn").click(); 
+    $("#myModal .close-btn").click();
 
 
 
@@ -138,22 +138,6 @@ $("#check").click(function() {
         }
     }*/
 })
-
-/*$("#check").click(function() { //duplication of the function above
-    let objectAnswer = $(".open-question-modal").data("answer");
-
-    let answer = questionSet.find(object => object.answers === objectAnswer); //The problem is here, answer is undefined
-
-    answer = "b";
-    
-    let input = $("#answer").val();
-
-    if (input == answer) {
-        alert("correct");
-    } else {
-        alert("incorrect");
-    }
-})*/
  
 $('#exampleModal').on('shown.bs.modal', function () { //alert Box
     $('#myInput').trigger('focus')
