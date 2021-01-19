@@ -19,21 +19,21 @@
         <h1 class="container-fluid">JS Test</h1>
         <nav class="navbar navbar-expand-sm justify-content-center navbar-light">
             <ul class="menu navbar-nav">
-                <li id="lesson" class="button-nav nav-item"><a class="nav-link">Lessons</a></li>
-                <li id="drill" class="button-nav nav-item"><a class="nav-link">Drills</a></li>
-                <li id="test" class="button-nav nav-item"><a class="nav-link">Test</a></li>
+                <li id="lesson" class="button-nav nav-item" data-id="lesson-id"><a class="nav-link">Lessons</a></li>
+                <li id="drill" class="button-nav nav-item" data-id="drill-id"><a class="nav-link">Drills</a></li>
+                <li id="test" class="button-nav nav-item" data-id="test-id"><a class="nav-link">Test</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="lessons-page" class="whole-page" data-id="lesson-whole-page">
+        <section id="lessons-page" class="whole-page" data-id="lesson-id">
             <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-2">
                             <h3 data-id="pre-introduction" id="main" class="lesson-button">Lessons</h3> 
                             <ul class="menu list-group">
                                 <li data-id="introduction" class="lesson-button list-group-item-action list-group-item-primary ">Introduction</li>
-                                <li data-id="set-up" class="lesson-button list-group-item-action list-group-item-primary">Set up</li>
+                                <li data-id="set-up" class="lesson-button list-group-item-action list-group-item-primary">SetUp</li>
                                 <li data-id="data-types" class="lesson-button list-group-item-action list-group-item-primary">Data Types</li>
                                 <li data-id="variables" class="lesson-button list-group-item-action list-group-item-primary">Variables</li>        
                                 <li data-id="comments" class="lesson-button list-group-item-action list-group-item-primary">Comments</li>
@@ -182,60 +182,56 @@
                     </div> 
                 </div>
         </section>
-        <section id="drills-page" class="whole-page" data-id="drill-whole-page">
+        <section id="drills-page" class="whole-page" data-id="drill-id">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-2">
-                        <h3 id="drill-part">Drills</h3>
+                        <h3 id="drill-part" class="drill-button" data-id="drills-name">Drills</h3>
                         <ul class="menu list-group">
-                            <li id="introduction-drills" class="list-group-item-action list-group-item-primary">Introduction</li>
-                            <li id="setUp-drills" class="list-group-item-action list-group-item-primary">setUp</li>
-                            <li id="dataTypes-drills" class="list-group-item-action list-group-item-primary">Data Types</li>
-                            <li id="variables-drills" class="list-group-item-action list-group-item-primary">Variables</li>
-                            <li id="comments-drills" class="list-group-item-action list-group-item-primary">Comments</li>
-                            <li id="arithmetic-operators-drills" class="list-group-item-action list-group-item-primary">Arithmetic Operators</li>
+                            <li id="introduction-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-introduction">Introduction</li>
+                            <li id="setUp-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-setUp">SetUp</li>
+                            <li id="dataTypes-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-data-types">Data Types</li>
+                            <li id="variables-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-variables">Variables</li>
+                            <li id="comments-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-comments">Comments</li>
+                            <li id="arithmetic-operators-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drills-arithmetic-operators">Arithmetic Operators</li>
                         </ul> 
                     </div>
 
-                    <div id="pre-introduction-drills" class="col-sm-10">
-                        <p>In this page you can practice about the different subjects, by repetition.</p>
+                    <div id="pre-introduction-drills" class="page-drill col-sm-10" data-id="drills-name">
                     </div>
-
-                    <div id="introduction-drills-page" class="col-sm-10">
+                    <div id="introduction-drills-page" class="page-drill col-sm-10" data-id="drill-introduction">
                         <h2>Introduction Drills</h2>
-                        <div id="introduction-first">
-                            <h3>What is JS?</h3>
-                            <ul>
-                                <li>(a) JS is a front-end programming language used in making websites dynamic.</li>
-                                <li>(b) JS is a back-end language used for servers.</li>
-                                <li>(c) JS is used mainly to design websites.</li>
-                            </ul>
-                            <div id="input"></a>
-                                <input id="introduction-insert">
-                                <button class="btn btn-primary">Next</button>
-                            </div>
-                        </div>
                     </div>
-                    <div  id="setUp-drills-page" class="col-sm-10">
+                    <div  id="setUp-drills-page" class="page-drill col-sm-10" data-id="drill-setUp">
                         <h2>setUp Drills</h2>
                     </div>
-                    <div id="data-types-drills-page" class="col-sm-10">
+                    <div id="data-types-drills-page" class="page-drill col-sm-10" data-id="drill-data-types">
                         <h2>Data Type Drills</h2>
                     </div>
-                    <div id="variable-drills-page" class="col-sm-10">
+                    <div id="variable-drills-page" class="page-drill col-sm-10" data-id="drill-variables">
                         <h2>Variable Drills</h2>
                     </div>
-                    <div id="comment-drills-page" class="col-sm-10">
+                    <div id="comment-drills-page" class="page-drill col-sm-10" data-id="drill-comments" data-id="comments">
                         <h2>Comment Drills</h2>
                     </div>
-                    <div id="arithmetic-operator-drills-page" class="col-sm-10">
+                    <div id="arithmetic-operator-drills-page" class="page-drill col-sm-10" data-id="drills-arithmetic-operators">
                         <h2>Arithmetic Operator Drills</h2>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="tests-page" class="whole-page" data-id="test-whole-page">
-            <h3>Tests</h3>
+        <section id="tests-page" class="whole-page" data-id="test-id">
+            <div class="col-sm-2">
+                <h3 id="test-part" class="test-button" data-id="test-name">Tests</h3>
+                <ul class="menu list-group">
+                    <li id="introduction-tests" class="test-button list-group-item-action list-group-item-primary" data-id="test-introduction">Introduction</li>
+                    <li id="setUp-test" class="test-button list-group-item-action list-group-item-primary" data-id="test-setUp">SetUp</li>
+                    <li id="dataTypes-test" class="test-button list-group-item-action list-group-item-primary" data-id="test-data-types">Data Types</li>
+                    <li id="variables-tests" class="test-button list-group-item-action list-group-item-primary" data-id="test-variables">Variables</li>
+                    <li id="comments-tests" class="test-button list-group-item-action list-group-item-primary" data-id="test-comments">Comments</li>
+                    <li id="arithmetic-operators-tests" class="test-button list-group-item-action list-group-item-primary" data-id="tests-arithmetic-operators">Arithmetic Operators</li>
+                </ul> 
+            </div>
         </section>
     </main>
 

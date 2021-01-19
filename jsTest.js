@@ -125,7 +125,7 @@ $(".lesson-button").click(function() {
     let pageId = $(this).data("id");
  
     $(".page").each(function() {
-        if($(this).data("id") === pageId) {
+        if ($(this).data("id") === pageId) {
             $(this).show();
         } else {
             $(this).hide();
@@ -133,124 +133,26 @@ $(".lesson-button").click(function() {
     })
 }) 
 
-//Nav bar
-/*$("#lesson").click(function() {
-    $("#lessons-page").show();
-    $("#drills-page").hide();
-    $("#tests-page").hide();
-})
+$(".drill-button").click(function() {
+    let pageId = $(this).data("id");
+ 
+    $(".page-drill").each(function() {
+        if ($(this).data("id") === pageId) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    })
+}) 
 
-$("#drill").click(function() {
-    $("#lessons-page").hide();
-    $("#drills-page").show();
-    $("#tests-page").hide();
-})
-
-$("#test").click(function() {
-    $("#lessons-page").hide();
-    $("#drills-page").hide();
-    $("#tests-page").show();
-})*/
-
-$(".button-nav").click(function() {
+/$(".button-nav").click(function() {
     let wholePageId = $(this).data("id");
  
     $(".whole-page").each(function() {
-        if($(this).data("id") === wholePageId) {
+        if ($(this).data("id") === wholePageId) {
             $(this).show();
         } else {
             $(this).hide(); 
         }
     })
 }) 
-
-/*How to use find() method
-let myArray = [2, 5, 6, 7, 1]
-
-const sixExists = myArray.find((number) => number === 6)
-
->>> true
-*/
-
-/*let myArray = [ How to use find method in an object
-    {
-        phone: "12",
-        name: "dan",
-    },
-    {
-        phone: "14",
-        name: "mahdi",
-    },
-]
-
-const phoneFinder = myArray.find((object) => object.name == "mahdi")
-
-console.log(phoneFinder.phone);
-
->>> 14
-*/
-
-
-/*function functionName(number) {
-    if(number === 6) {
-        return true;
-    } 
-    return false;
-} 
-
-console.log(functionName(7))
-console.log(functionName(6))*/
-
-/*function function_name(Parameter) {
-
-}
-
-const function_name = (name = "Dan") => {
-    return myvalue;
-}
-
-const a = 2;
-const function_name = (name = "Dan") => "a" + name
-
-const function_name = (name = "Dan") => {
-    let output = "a" + name;
-    return output;
-} 
-
-Parameter is variable defined in function declaration. Argument is the actual value of this variable that get passed to the function*/
-
-/*ES6 function syntax NOTE
-const functionName = (parameter) => returnValue
-
-const function_name = (name = "Dan") => "a" + name*/
-
-/*let myArray = [
-    {
-        phone: "12",
-        name: "dan",
-    },
-    {
-        phone: "14",
-        name: "mahdi",
-    },
-]
-
-let myArray = [1, 2]
-let myArray = ["dan", "mahdi"]
-
-find ===> if not found ==> undefined 
-find ===> if found ==> item in array
-
-
-const myVar = myArray.find((item) => item.name == "mahdi")
-
->>>{
-        phone: "14",
-        name: "mahdi",
-    }
-
-    myVar ==> { 
-    phone: "14",
-    name: "mahdi",
-}
-*/
