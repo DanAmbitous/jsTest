@@ -83,8 +83,6 @@ var drillSet = [
 
 $("#introduction-lessons").show(); //To show the pre introduction page by default
 
-$("#tests-page").hide
-
 $(".open-question-modal").click(function() {//quiz box
     let questionId = $(this).data("id");
 
