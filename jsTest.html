@@ -40,8 +40,7 @@
                                 <li data-id="arithmetic-operators" class="lesson-button list-group-item-action list-group-item-primary"> Arithmetic Operators</li>
                             </ul>
                         </div>
-
-                    <div id="introduction-lessons" class="page col-sm-10" data-id="pre-introduction">
+                    <div id="pre-introduction" class="page col-sm-10" data-id="pre-introduction">
                         <p>Welcome, this is a website for learning the fundamentals of vanilla JS, here you'll find lessons where you can learn, drills where you can practice with repetition, and tests which is where you can find out how much you know about JS!</p>
 
                         <p>It's recommend for you to go through the lessons from top to bottom, unless you are looking for a particular lesson such for reference about a certain subject.</p>
@@ -181,71 +180,120 @@
                         </button>
                     </div> 
                 </div>
+            </div>
         </section>
         <section id="drills-page" class="whole-page" data-id="drill-id">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-2">
-                        <h3 id="drill-part" class="drill-button" data-id="drills-name">Drills</h3>
-                        <ul class="menu list-group">
-                            <li id="introduction-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-introduction">Introduction</li>
-                            <li id="setUp-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-setUp">SetUp</li>
-                            <li id="dataTypes-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-data-types">Data Types</li>
-                            <li id="variables-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-variables">Variables</li>
-                            <li id="comments-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drill-comments">Comments</li>
-                            <li id="arithmetic-operators-drills" class="drill-button list-group-item-action list-group-item-primary" data-id="drills-arithmetic-operators">Arithmetic Operators</li>
-                        </ul> 
-                    </div>
+                        <h3 data-id="pre-introduction" id="main" class="drill-button">Drills</h3> <!--!-->
+                        <ul class="menu list-group"> <!--!-->
+                            <li data-id="introduction" class="drill-button list-group-item-action list-group-item-primary ">Introduction</li>
+                            <li data-id="set-up" class="drill-button list-group-item-action list-group-item-primary">SetUp</li>
+                            <li data-id="data-types" class="drill-button list-group-item-action list-group-item-primary">Data Types</li>
+                            <li data-id="variables" class="drill-button list-group-item-action list-group-item-primary">Variables</li>        
+                            <li data-id="comments" class="drill-button list-group-item-action list-group-item-primary">Comments</li>
+                            <li data-id="arithmetic-operators" class="drill-button list-group-item-action list-group-item-primary"> Arithmetic Operators</li>
+                        </ul>
+                    </div> 
 
-                    <div id="pre-introduction-drills" class="page-drill col-sm-10" data-id="drills-name">
-                        <p>This page is for drilling the things that have been shown in the lessons page, by repetition.</p>
-                    </div>
-                    <div id="introduction-drills-page" class="page-drill col-sm-10" data-id="drill-introduction">
-                        <h2>Introduction Drills</h2>
+                    <!--pre introduction-->
+                    <div data-id="pre-introduction" class="drill-page col-sm-10">
                         <p>
-                            In the introduction page you will have to answer questions about what is JavaScript
+                            In the Drill's page you will have mulitple drills about the things shown in the lessons page. Drills are repetition lessons to practice the skills.
                         </p>
                     </div>
-                    <div  id="setUp-drills-page" class="page-drill col-sm-10" data-id="drill-setUp">
-                        <h2>setUp Drills</h2>
+                        <!--introduction-->
+                    <div data-id="introduction" class="drill-page-hide drill-page col-sm-10">
+                        <h2>Introduction Drill</h2>
                         <p>
-                            In the setUp page you will answer questions about setting up JavaScript
+                            JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS. It was created by Brendan Eich in 1995, in just 10 days.
                         </p>
-                    </div>
-                    <div id="data-types-drills-page" class="page-drill col-sm-10" data-id="drill-data-types">
-                        <h2>Data Type Drills</h2>
-                        <p>
-                            In the Data types page you will answer questions about the data types in JavaScript
-                        </p>
-                    </div>
-                    <div id="variable-drills-page" class="page-drill col-sm-10" data-id="drill-variables">
-                        <h2>Variable Drills</h2>
-                        <p>
-                            In the variable page you will cover the different variable types
-                        </p>
-                    </div>
-                    <div id="comment-drills-page" class="page-drill col-sm-10" data-id="drill-comments" data-id="comments">
-                        <h2>Comment Drills</h2>
-                        <p>In the comments page you will cover the different types of comments and what they're used for</p>
-                    </div>
-                    <div id="arithmetic-operator-drills-page" class="page-drill col-sm-10" data-id="drills-arithmetic-operators">
-                        <h2>Arithmetic Operator Drills</h2>
-                        <p>In the Arithmetic operator page you will answer questions about the arithmetic</p>
-                    </div>
+                            
+                        <div id="quiz"></div>
+                        <button type="button" id="submit" class="drills-page btn btn-primary">
+                            Drill
+                        </button>
+                        <div id="results"></div>
+                    </div> 
+                        <!--SetUp-->
+                        <div data-id="set-up" class="drill-page-hide drill-page col-sm-10">
+                            <h2>SetUp Drill</h2>
+                            <p>
+                                JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
+                            </p>
+                                
+                                <!-- Button to Open the Modal -->
+                            <button type="button" class="drills-page btn btn-primary">
+                                Drill
+                            </button>
+                        </div>
+                        <!--Data Types Drill-->
+                        <div data-id="data-types" class="drill-page-hide drill-page col-sm-10">
+                            <h2>Data Types Drill</h2>
+                            <p>
+                                JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
+                            </p>
+                                
+                                <!-- Button to Open the Modal -->
+                            <button type="button" class="drills-page btn btn-primary">
+                                Drill
+                            </button>
+                        </div>
+                        <!--Variables-->
+                        <div data-id="variables" class="drill-page-hide drill-page col-sm-10">
+                            <h2>Variables Drill</h2>
+                            <p>
+                                JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
+                            </p>
+                                
+                                <!-- Button to Open the Modal -->
+                            <button type="button" class="drills-page btn btn-primary">
+                                Drill
+                            </button>
+                        </div>
+                        <!--Comments-->
+                        <div data-id="comments" class="drill-page-hide drill-page col-sm-10">
+                            <h2>Comments Drill</h2>
+                            <p>
+                                JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
+                            </p>
+                                
+                                <!-- Button to Open the Modal -->
+                            <button type="button" class="drills-page btn btn-primary">
+                                Drill
+                            </button>
+                        </div>
+                        <!--Arithmetic Operators-->
+                        <div data-id="arithmetic-operators" class="drill-page-hide drill-page col-sm-10">
+                            <h2>Arithmetic Operators Drill</h2>
+                            <p>
+                                JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
+                            </p>
+                                
+                                <!-- Button to Open the Modal -->
+                            <button type="button" class="drills-page btn btn-primary">
+                                Drill
+                            </button>
+                        </div>
                 </div>
             </div>
         </section>
         <section id="tests-page" class="whole-page" data-id="test-id">
-            <div class="col-sm-2">
-                <h3 id="test-part" class="test-button" data-id="test-name">Tests</h3>
-                <ul class="menu list-group">
-                    <li id="introduction-tests" class="test-button list-group-item-action list-group-item-primary" data-id="test-introduction">Introduction</li>
-                    <li id="setUp-test" class="test-button list-group-item-action list-group-item-primary" data-id="test-setUp">SetUp</li>
-                    <li id="dataTypes-test" class="test-button list-group-item-action list-group-item-primary" data-id="test-data-types">Data Types</li>
-                    <li id="variables-tests" class="test-button list-group-item-action list-group-item-primary" data-id="test-variables">Variables</li>
-                    <li id="comments-tests" class="test-button list-group-item-action list-group-item-primary" data-id="test-comments">Comments</li>
-                    <li id="arithmetic-operators-tests" class="test-button list-group-item-action list-group-item-primary" data-id="tests-arithmetic-operators">Arithmetic Operators</li>
-                </ul> 
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <h3 id="test-part" class="test-button" data-id="test-name">Tests</h3> <!--!-->
+                        <ul class="menu list-group"> <!--!-->
+                            <li data-id="introduction" class="test-button list-group-item-action list-group-item-primary ">Introduction</li>
+                            <li data-id="set-up" class="test-button list-group-item-action list-group-item-primary">SetUp</li>
+                            <li data-id="data-types" class="test-button list-group-item-action list-group-item-primary">Data Types</li>
+                            <li data-id="variables" class="test-button list-group-item-action list-group-item-primary">Variables</li>        
+                            <li data-id="comments" class="test-button list-group-item-action list-group-item-primary">Comments</li>
+                            <li data-id="arithmetic-operators" class="test-button list-group-item-action list-group-item-primary"> Arithmetic Operators</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -275,5 +323,5 @@
             </div>
           </div>
         </div>
-    </div>
+    </div> <!-- The Modal End -->
 </html>

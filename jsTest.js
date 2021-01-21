@@ -1,4 +1,8 @@
-var questionSet = [
+const quizContainer = $("#quiz");
+const resultsContainer = $("#results");
+const submitButton = $("#submit")
+
+const questionSet = [
     {
         id: "question-introduction-lesson",
         question: "What is JS?",
@@ -75,13 +79,51 @@ var questionSet = [
     }, 
 ]
 
-var drillSet = [
+const drillQustionIntroduction = [
     {
-        id: ""
-    }
-]
+        question: "What is JavaScript?",
+        answers: {
+            a: "an object-oriented computer programming language commonly used to create interactive effects within web browsers.",
+            b: "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or 'C with Classes'",
+            c: "Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications. Lua is cross-platform, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C API to embed it into applications."
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "Who created JavaScript?",
+        answers: {
+            a: "Guido van Rossum",
+            b: "Brendan Eich",
+            c: "Bjarne Stroustrup"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the common acronym for JavaScript?",
+        answers: {
+            a: "Py",
+            b: "Cpp",
+            c: "JS"
+        },
+        correctAnswer: "c"
+    },
+];
 
-$("#introduction-lessons").show(); //To show the pre introduction page by default
+$(".menu > li").mouseover(function() { //li elements hover effects
+    $(this).css("font-weight", "900")
+})
+ 
+$(".menu > li").mouseout(function() {
+    $(this).css("font-weight", "400")
+}) //li elements hover effects end
+
+$("#pre-introduction").show(); //To show the pre introduction page by default
+
+$(".drill-page-hide").hide(); //Hide all but pre-intro drill page
+
+$('#exampleModal').on('shown.bs.modal', function () { //alert Box
+    $('#myInput').trigger('focus')
+}) //alert Box end
 
 $(".open-question-modal").click(function() {//quiz box
     let questionId = $(this).data("id");
@@ -93,7 +135,7 @@ $(".open-question-modal").click(function() {//quiz box
     $(".modal-body").html(question.options.join("<br>"));
 })//quiz box end
 
-$("#check").click(function() {
+$("#check").click(function() { //Check and cancel buttons
     let questionId = $("#myModal").data("question");
     
     let answerInput = $("#answer").val();
@@ -107,45 +149,9 @@ $("#check").click(function() {
     } 
 
     $(".close-btn").click();
-})
+}) //Check and cancel buttons End
  
-$('#exampleModal').on('shown.bs.modal', function () { //alert Box
-    $('#myInput').trigger('focus')
-}) //alert Box
-
-$(".menu > li").mouseover(function() { //li elements hover effects
-    $(this).css("font-weight", "900")
-})
- 
-$(".menu > li").mouseout(function() {
-    $(this).css("font-weight", "400")
-}) //li elements hover effects end
-
-$(".lesson-button").click(function() {
-    let pageId = $(this).data("id");
- 
-    $(".page").each(function() {
-        if ($(this).data("id") === pageId) {
-            $(this).show();
-        } else {
-            $(this).hide();
-        }
-    })
-}) 
-
-$(".drill-button").click(function() {
-    let pageId = $(this).data("id");
- 
-    $(".page-drill").each(function() {
-        if ($(this).data("id") === pageId) {
-            $(this).show();
-        } else {
-            $(this).hide();
-        }
-    })
-}) 
-
-$(".button-nav").click(function() {
+$(".button-nav").click(function() { //Nav bar
     let wholePageId = $(this).data("id");
  
     $(".whole-page").each(function() {
@@ -155,4 +161,28 @@ $(".button-nav").click(function() {
             $(this).hide(); 
         }
     })
-}) 
+}); 
+
+$(".lesson-button").click(function() { //Lessons page
+    let pageId = $(this).data("id");
+ 
+    $(".page").each(function() {
+        if ($(this).data("id") === pageId) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    })
+}); 
+
+$(".drill-button").click(function() { //Drill page
+    let pageId = $(this).data("id");
+ 
+    $(".drill-page").each(function() {
+        if ($(this).data("id") === pageId) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    })
+});
