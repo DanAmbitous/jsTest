@@ -1,7 +1,3 @@
-const quizContainer = $("#quiz");
-const resultsContainer = $("#results");
-const submitButton = $("#submit")
-
 const questionSet = [
     {
         id: "question-introduction-lesson",
@@ -81,6 +77,7 @@ const questionSet = [
 
 const drillQustionIntroduction = [
     {
+        id: "drill-introduction",
         question: "What is JavaScript?",
         answers: {
             a: "an object-oriented computer programming language commonly used to create interactive effects within web browsers.",
@@ -90,6 +87,7 @@ const drillQustionIntroduction = [
         correctAnswer: "a"
     },
     {
+        id: "drill-set-up",
         question: "Who created JavaScript?",
         answers: {
             a: "Guido van Rossum",
@@ -98,7 +96,8 @@ const drillQustionIntroduction = [
         },
         correctAnswer: "b"
     },
-    {
+    {   
+        id: "drill-data-types",
         question: "What is the common acronym for JavaScript?",
         answers: {
             a: "Py",
@@ -175,7 +174,7 @@ $(".lesson-button").click(function() { //Lessons page
     })
 }); 
 
-$(".drill-button").click(function() { //Drill page
+$(".drill-button").click(function() {
     let pageId = $(this).data("id");
  
     $(".drill-page").each(function() {
