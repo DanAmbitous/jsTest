@@ -114,15 +114,12 @@ $("#show-drill").click(function() {
 
     const currentQuestion = drillQustionIntroduction[drillActiveQuestionIndex].answers;
 
-    console.log(currentQuestion);
-
     $(".drill-question").append(drillQustionIntroduction[drillActiveQuestionIndex].question);
 
     $(".drill-option").append(drillQustionIntroduction[drillActiveQuestionIndex].options);
 
     if (Array.isArray(currentQuestion)) {
-
-        for (let index = 0; index < drillQustionIntroduction.length; index++) {
+        for (let index = 0; index < currentQuestion.length; index++) {
             const element = currentQuestion[index];
 
             console.log(element);
@@ -138,9 +135,22 @@ $("#show-drill").click(function() {
 
             $(".drill-option").append(radioButton);
         }
-
     } else {
-        alert("Not an array");
+        for (let index = 0; index < currentQuestion.length; index++) {
+            const item = currentQuestion[index];
+
+            let checkBox = 
+            `
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    ${item}
+                </label>
+            </div>
+            `
+
+            $(".drill-option").append(checkBox);
+        }
     }
 });
 
@@ -270,8 +280,15 @@ $("#check").click(function() { //Check and cancel buttons
 
     $(".close-btn").click();
 }) //Check and cancel buttons End
+
+$("#title").click(function() {
+    $("#intro").show();
+    $("section").hide();
+})
  
 $(".button-nav").click(function() { //Nav bar
+    $("#intro").hide();
+
     let wholePageId = $(this).data("id");
  
     $(".section").each(function() {
@@ -284,6 +301,8 @@ $(".button-nav").click(function() { //Nav bar
 }); 
 
 $(".lesson-button").click(function() { //Lessons page
+    $("#intro").hide();
+
     let pageId = $(this).data("id");
  
     $(".page").each(function() {
@@ -296,6 +315,8 @@ $(".lesson-button").click(function() { //Lessons page
 }); 
 
 $(".drill-button").click(function() { //Drill page
+    $("#intro").hide();
+
     let pageId = $(this).data("id");
  
     $(".drill-page").each(function() {

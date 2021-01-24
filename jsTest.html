@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>         
-        <h1 class="container-fluid">JS Test</h1>
+        <h1 id="title" class="container-fluid">JS Test</h1>
         <nav class="navbar navbar-expand-sm justify-content-center navbar-light">
             <ul class="menu navbar-nav">
                 <li class="button-nav nav-item" data-id="lesson-id"><a class="nav-link">Lessons</a></li>
@@ -26,6 +26,7 @@
         </nav>
     </header>
     <main>
+        <p id="intro">Hello Welcome to JS Test, here you can learn some of the JS fundamentals as well as practice them and test yourself to see how well you do!</p>
         <section id="lessons-page" class="section whole-page" data-id="lesson-id">
             <div class="container-fluid">
                     <div class="row">
@@ -225,21 +226,7 @@
                             <div class="drill-option">
                                 
                             </div>
-
-                            <!--<div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                  Default radio
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                  Second default radio
-                                </label>
-                            </div>-->
                         </div>
-                        
                     </div> 
                         <!--SetUp-->
                         <div data-id="set-up" class="page drill-page-hide drill-page col-sm-10">
@@ -252,6 +239,15 @@
                             <button type="button" class="drills-page btn btn-primary">
                                 Drill
                             </button>
+
+                            <div class="drill-questions-setUp">
+                                <div class="drill-question">
+                                    
+                                </div>
+                                <div class="drill-option-setUp">
+                                    
+                                </div>
+                            </div>
                         </div>
                         <!--Data Types Drill-->
                         <div data-id="data-types" class="page drill-page-hide drill-page col-sm-10">
