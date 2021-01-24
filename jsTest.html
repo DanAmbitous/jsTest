@@ -19,14 +19,14 @@
         <h1 class="container-fluid">JS Test</h1>
         <nav class="navbar navbar-expand-sm justify-content-center navbar-light">
             <ul class="menu navbar-nav">
-                <li id="lesson" class="button-nav nav-item" data-id="lesson-id"><a class="nav-link">Lessons</a></li>
-                <li id="drill" class="button-nav nav-item" data-id="drill-id"><a class="nav-link">Drills</a></li>
-                <li id="test" class="button-nav nav-item" data-id="test-id"><a class="nav-link">Test</a></li>
+                <li class="button-nav nav-item" data-id="lesson-id"><a class="nav-link">Lessons</a></li>
+                <li class="button-nav nav-item" data-id="drill-id"><a class="nav-link">Drills</a></li>
+                <li class="button-nav nav-item" data-id="test-id"><a class="nav-link">Test</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="lessons-page" class="whole-page" data-id="lesson-id">
+        <section id="lessons-page" class="section whole-page" data-id="lesson-id">
             <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-2">
@@ -55,6 +55,9 @@
                         <button type="button" class="btn btn-primary open-question-modal" data-toggle="modal" data-target="#myModal" data-id="question-introduction-lesson" data-answer="answer-introduction-lesson">
                             Quiz
                         </button>
+
+                        
+
                     </div> 
 
                     <!--Set up-->
@@ -182,7 +185,7 @@
                 </div>
             </div>
         </section>
-        <section id="drills-page" class="whole-page" data-id="drill-id">
+        <section id="drills-page" class="section" data-id="drill-id">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-2">
@@ -204,20 +207,42 @@
                         </p>
                     </div>
                         <!--introduction-->
-                    <div data-id="introduction" class="drill-page-hide drill-page col-sm-10">
+                    <div data-id="introduction" class="page drill-page-hide drill-page col-sm-10">
                         <h2>Introduction Drill</h2>
-                        <p>
+                        <p class="drill-description">
                             JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS. It was created by Brendan Eich in 1995, in just 10 days.
                         </p>
                             
                         <div id="quiz"></div>
-                        <button type="button" id="submit" class="drills-page btn btn-primary">
+                        <button type="button" id="show-drill" class="drills-page btn btn-primary">
                             Drill
                         </button>
-                        <div id="results"></div>
+
+                        <div class="drill-questions">
+                            <div class="drill-question">
+                                
+                            </div>
+                            <div class="drill-option">
+                                
+                            </div>
+
+                            <!--<div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                  Default radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                  Second default radio
+                                </label>
+                            </div>-->
+                        </div>
+                        
                     </div> 
                         <!--SetUp-->
-                        <div data-id="set-up" class="drill-page-hide drill-page col-sm-10">
+                        <div data-id="set-up" class="page drill-page-hide drill-page col-sm-10">
                             <h2>SetUp Drill</h2>
                             <p>
                                 JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
@@ -229,7 +254,7 @@
                             </button>
                         </div>
                         <!--Data Types Drill-->
-                        <div data-id="data-types" class="drill-page-hide drill-page col-sm-10">
+                        <div data-id="data-types" class="page drill-page-hide drill-page col-sm-10">
                             <h2>Data Types Drill</h2>
                             <p>
                                 JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
@@ -241,7 +266,7 @@
                             </button>
                         </div>
                         <!--Variables-->
-                        <div data-id="variables" class="drill-page-hide drill-page col-sm-10">
+                        <div data-id="variables" class="page drill-page-hide drill-page col-sm-10">
                             <h2>Variables Drill</h2>
                             <p>
                                 JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
@@ -253,7 +278,7 @@
                             </button>
                         </div>
                         <!--Comments-->
-                        <div data-id="comments" class="drill-page-hide drill-page col-sm-10">
+                        <div data-id="comments" class="page drill-page-hide drill-page col-sm-10">
                             <h2>Comments Drill</h2>
                             <p>
                                 JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
@@ -265,21 +290,21 @@
                             </button>
                         </div>
                         <!--Arithmetic Operators-->
-                        <div data-id="arithmetic-operators" class="drill-page-hide drill-page col-sm-10">
+                        <div data-id="arithmetic-operators" class="page drill-page-hide drill-page col-sm-10">
                             <h2>Arithmetic Operators Drill</h2>
                             <p>
                                 JS is a programming langauge used along with HTML and CSS, it creates dynamic effects on websites, although it can also be used for creating native applications, games, mangaging backend, AI, as well as many other things. Although for some of them you would need JS libraries, frameworks, etc. such as for backend, but a lot can also be made with just JS.
                             </p>
                                 
                                 <!-- Button to Open the Modal -->
-                            <button type="button" class="drills-page btn btn-primary">
+                            <button type="button" class="page drills-page btn btn-primary">
                                 Drill
                             </button>
                         </div>
                 </div>
             </div>
         </section>
-        <section id="tests-page" class="whole-page" data-id="test-id">
+        <section id="tests-page" class="section whole-page" data-id="test-id">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-2">
@@ -297,18 +322,38 @@
             </div>
         </section>
     </main>
-    <footer>
+    
+    <footer class="fixed-bottom footer">
         <div class="container-fluid">
-            <div class="row">
-                <ul>
-                    <div class="col-sm-6">
-                        <li>Contact</li>
+            <ul class="row align-items-center">     
+                <li class="col footer-content" data-id="footer-contact">Contact
+                    <div class="footer-data">
+                        <h2>Contact</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Discord</th>
+                                    <th scope="col">Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Links</th>
+                                    <td>https://discord.com</td>
+                                    <td>dangmail.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="col-sm-6">
-                        <li>About Us</li>
+                </li>
+                <li class="col footer-content" data-id="footer-about-us">About Us
+                    <div class="footer-data">
+                        <h2>About Us</h2>
+                        <p>We are a team that create applications.</p>
                     </div>
-                </ul>
-            </div>
+                </li>   
+            </ul>
         </div>
     </footer>
 

@@ -1,7 +1,3 @@
-const quizContainer = $("#quiz");
-const resultsContainer = $("#results");
-const submitButton = $("#submit")
-
 const questionSet = [
     {
         id: "question-introduction-lesson",
@@ -12,7 +8,8 @@ const questionSet = [
             "(b) JS is a back-end programming language that is used for server side things, such as data management, AI, and other server side related things."
         ],
         answers: [
-            "a"
+            "a", 
+            "b",
         ]
     }, 
     {
@@ -79,35 +76,160 @@ const questionSet = [
     }, 
 ]
 
+var drillActiveQuestionIndex = 0;
+
 const drillQustionIntroduction = [
     {
         question: "What is JavaScript?",
-        answers: {
-            a: "an object-oriented computer programming language commonly used to create interactive effects within web browsers.",
-            b: "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or 'C with Classes'",
-            c: "Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications. Lua is cross-platform, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C API to embed it into applications."
-        },
-        correctAnswer: "a"
+        options: [
+            "an object-oriented computer programming language commonly used to create interactive effects within web browsers.",
+            "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or 'C with Classes'",
+            "Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications. Lua is cross-platform, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C API to embed it into applications.",
+            "Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications. Lua is cross-platform, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C API to embed it into applications."
+        ],
+        answers: ["a", "b"]
     },
     {
         question: "Who created JavaScript?",
-        answers: {
-            a: "Guido van Rossum",
-            b: "Brendan Eich",
-            c: "Bjarne Stroustrup"
-        },
-        correctAnswer: "b"
+        options: [ 
+            "Guido van Rossum",
+            "Brendan Eich",
+            "Bjarne Stroustrup"
+        ],
+        answers: "b"
     },
     {
         question: "What is the common acronym for JavaScript?",
-        answers: {
-            a: "Py",
-            b: "Cpp",
-            c: "JS"
-        },
-        correctAnswer: "c"
+        options: [
+            "Py",
+            "Cpp",
+            "JS"
+        ],
+        answers: "c"
     },
 ];
+
+$("#show-drill").click(function() {
+    $(".drill-description").hide("fast");
+
+    const currentQuestion = drillQustionIntroduction[drillActiveQuestionIndex].answers;
+
+    console.log(currentQuestion);
+
+    $(".drill-question").append(drillQustionIntroduction[drillActiveQuestionIndex].question);
+
+    $(".drill-option").append(drillQustionIntroduction[drillActiveQuestionIndex].options);
+
+    if (Array.isArray(currentQuestion)) {
+
+        for (let index = 0; index < drillQustionIntroduction.length; index++) {
+            const element = currentQuestion[index];
+
+            console.log(element);
+            
+            let radioButton = 
+            `
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    ${element}
+            </div>
+            `
+
+            $(".drill-option").append(radioButton);
+        }
+
+    } else {
+        alert("Not an array");
+    }
+});
+
+/*$("#show-drill").click(function() {
+    const currentQuestion = drillQustionIntroduction[drillActiveQuestionIndex]
+
+    $(".drill-question").append(currentQuestion.question);
+
+    if (typeof currentQuestion.answers === "string") { //radio btn
+        currentQuestion.options.forEach(function(item) {
+            let radioButton = 
+            `
+            <div class="form-check">
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                <label class="form-check-label" for="defaultCheck2">
+                    ${element}
+                </label>
+            </div>
+            `
+            $(".drill-option").append(radioButton);
+        });
+    }
+})
+
+    $("#show-drill").click(function() {
+    $(".drill-description").hide("slow");
+    let question = drillQustionIntroduction[drillActiveQuestionIndex].question;
+    let options = drillQustionIntroduction[drillActiveQuestionIndex].options;
+    console.log(Array.isArray(options)
+    )
+})
+    if (Array.isArray(options)) {
+        for (let index = 0; index < options.length; index++) {
+            const element = options[index];
+            const radioButton = `
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    Default checkbox
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                <label class="form-check-label" for="defaultCheck2">
+                    ${element}
+                </label>
+            </div>
+            `
+    
+        $(".drill-option").append(radioButton);
+   
+        $(".drill-question").append(question);
+        })
+        
+    } else {
+        for (let index = 0; index < options.length; index++) {
+            const element = options[index];
+            const radioButton = `
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              ${element}
+            </label>
+            </div>
+            `
+    
+        $(".drill-option").append(radioButton);
+        }
+    }
+        
+    $(".drill-option").append(options);
+
+    for (let index = 0; index < options.length; index++) {
+        const element = options[index];
+        const radioButton = `
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          ${element}
+        </label>
+        </div>
+        `
+
+        $(".drill-option").append(radioButton);
+    }
+})*/
 
 $(".menu > li").mouseover(function() { //li elements hover effects
     $(this).css("font-weight", "900")
@@ -118,8 +240,6 @@ $(".menu > li").mouseout(function() {
 }) //li elements hover effects end
 
 $("#pre-introduction").show(); //To show the pre introduction page by default
-
-$(".drill-page-hide").hide(); //Hide all but pre-intro drill page
 
 $('#exampleModal').on('shown.bs.modal', function () { //alert Box
     $('#myInput').trigger('focus')
@@ -154,7 +274,7 @@ $("#check").click(function() { //Check and cancel buttons
 $(".button-nav").click(function() { //Nav bar
     let wholePageId = $(this).data("id");
  
-    $(".whole-page").each(function() {
+    $(".section").each(function() {
         if ($(this).data("id") === wholePageId) {
             $(this).show();
         } else {
@@ -186,3 +306,13 @@ $(".drill-button").click(function() { //Drill page
         }
     })
 });
+
+$(".footer-content").click(function() {
+    let pageId = $(this).data("id");
+ 
+    $(".drill-page").each(function() {
+        if ($(this).data("id") === pageId) {
+            $(this).show();
+        }
+    })
+})

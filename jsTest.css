@@ -61,3 +61,22 @@ li {
 .page {
     display:none;
 }
+
+/*.footer-data {
+    display: none;
+}*/
+
+.whole-page {
+    display:none;
+}
+
+/*.drill-questions {
+    display: none;
+}*/
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        display: none;
+    }
+}
+
