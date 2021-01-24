@@ -110,21 +110,17 @@ const drillQustionIntroduction = [
 ];
 
 $("#show-drill").click(function() {
-    $(".drill-description").hide("fast");
+    $(".drill-description").hide("slow");
 
-    const currentQuestion = drillQustionIntroduction[drillActiveQuestionIndex].answers;
+    const currentQuestion = drillQustionIntroduction[drillActiveQuestionIndex].options;
 
     $(".drill-question").append(drillQustionIntroduction[drillActiveQuestionIndex].question);
 
-    $(".drill-option").append(drillQustionIntroduction[drillActiveQuestionIndex].options);
-
-    if (Array.isArray(currentQuestion)) {
+    if (Array.isArray(drillQustionIntroduction[0].answers)) {
         for (let index = 0; index < currentQuestion.length; index++) {
             const element = currentQuestion[index];
-
-            console.log(element);
             
-            let radioButton = 
+            let checkBox = 
             `
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -133,13 +129,13 @@ $("#show-drill").click(function() {
             </div>
             `
 
-            $(".drill-option").append(radioButton);
+            $(".drill-option").append(checkBox);
         }
     } else {
         for (let index = 0; index < currentQuestion.length; index++) {
             const item = currentQuestion[index];
 
-            let checkBox = 
+            let radioButton = 
             `
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -149,7 +145,7 @@ $("#show-drill").click(function() {
             </div>
             `
 
-            $(".drill-option").append(checkBox);
+            $(".drill-option").append(radioButton);
         }
     }
 });
